@@ -21,8 +21,11 @@ import { useState } from "react";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "src/firebase";
+import { useAuthUser } from "src/hooks/useAuthUser";
 
 const Register = () => {
+  useAuthUser();
+
   const [values, setValues] = useState({
     showPassword: false,
     showConfirmPassword: false,
@@ -59,8 +62,8 @@ const Register = () => {
       confirmPassword: "",
       /* policy: false, */
     },
-    validateOnChange: false,
-    validateOnBlur: true,
+/*     validateOnChange: false,
+    validateOnBlur: false, */
     validationSchema: Yup.object({
       email: Yup.string().email("Ingresa un email valido.").max(255).required("Ingresa tu email."),
       firstName: Yup.string().max(255).required("Ingresa tu nombre."),
