@@ -6,12 +6,7 @@ import {getAuth} from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCCOcEQVOJuWuPXnUm40Didu4lOKcY-f-s",
-  authDomain: "next-lontec-form.firebaseapp.com",
-  projectId: "next-lontec-form",
-  storageBucket: "next-lontec-form.appspot.com",
-  messagingSenderId: "839227027881",
-  appId: "1:839227027881:web:e24764d4993c3b8ba5d4b8"
+
 };
 
 // Initialize Firebase
